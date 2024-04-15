@@ -1,0 +1,36 @@
+header {
+  overflow: hidden;
+  width: 100%;
+}
+
+nav ul {
+  padding: 20px;
+}
+nav ul li img {
+  height: 42px;
+  width: 60px;
+}
+
+nav ul li span {
+  color: #ffff;
+  margin-left: -15px;
+
+  font-size: 44px;
+}
+
+nav ul .links li {
+  list-style: none;
+  padding: 7px;
+  font-size: 18px;
+  color: #ffff;
+}
+nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #ffff;
+}
+
+/* nav ul li a:is(:link, :active, :visited).active {
+  color: #ffff;
+  background-color: aqua;
+} */

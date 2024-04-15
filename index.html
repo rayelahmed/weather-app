@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Weather App</title>
+  </head>
+  <body class="weather-app">
+    <header>
+      <nav class="">
+        <ul class="d-flex align-items-center justify-content-center">
+          <div>
+            <div class="d-flex">
+              <li class="d-flex align-items-start">
+                <img src="/img/icons/clear sky.png" alt="" />
+              </li>
+              <li class="d-flex align-items-end">
+                <a class="active" href="/index.html">
+                  <span>WeatherMe</span>
+                </a>
+              </li>
+            </div>
+            <p
+              id="current-time"
+              style="margin-top: -13px; font-size: 17px; padding-right: 7px"
+              class="text-end"
+            ></p>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="weather-section">
+      <!-- Toggle Button -->
+      <div>
+        <div class="toggle-button">
+          <p class="pr-2">°F</p>
+          <input type="checkbox" id="check" />
+          <label for="check" class="button"></label>
+          <p class="pl-2">°C</p>
+        </div>
+      </div>
+
+      <!-- SearchBar -->
+      <div class="SearchBar text-center">
+        <form class="input-form mb-3" onsubmit="saveCityName(event)">
+          <div style="position: relative">
+            <img
+              src="/img/icons/Vector.png"
+              alt=""
+              style="
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+              "
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Search location..."
+              style="
+                padding-left: 50px;
+                font-size: 18px;
+                background-color: #d9d9d9;
+                box-sizing: border-box; /* Include padding and border in the width */
+              "
+            />
+          </div>
+          <div class="error-message"></div>
+        </form>
+      </div>
+
+      <!-- Weather-details -->
+      <div class="slider-container mt-5">
+        <div class="slider">
+          <div class="weather-data p-4">
+            <div class="d-flex align-items-center">
+              <h2 class="country"></h2>
+              <img src="/img/icons/Vector 2.png" alt="" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="data-row">
+                <div class="d-flex align-items-center">
+                  <img src="/img/icons/Vector 3.png" alt="" />
+                  <h3 class="tem"></h3>
+                </div>
+                <h2 class="weather-condition"></h2>
+              </div>
+            </div>
+
+            <div class="date">
+              <h3 class="curr-date"></h3>
+            </div>
+          </div>
+          <div
+            class="d-flex mt-4 mb-4 justify-content-center align-items-center"
+          >
+            <div class="data-flow">
+              <div class="text-center">
+                <h4>Humidity</h4>
+                <h4 class="humidity"></h4>
+              </div>
+
+              <div class="text-center">
+                <h4>Visibility</h4>
+                <h4 class="visibility"></h4>
+              </div>
+              <div class="text-center">
+                <h4>Air Pressure</h4>
+                <h4 class="air-pressure"></h4>
+              </div>
+              <div class="text-center">
+                <h4>Wind</h4>
+                <h4 class="wind"></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hourly Forecast -->
+
+      <div class="d-flex justify-content-center">
+        <div class="hourly-forecast text-center">
+          <div class="vector">
+            <h4 class="time1"></h4>
+            <div class="weather-img"></div>
+            <h5 class="tem mb-5"></h5>
+          </div>
+          <div class="vector">
+            <h4 class="time2"></h4>
+            <div class="weather-img2"></div>
+            <h5 class="tem"></h5>
+          </div>
+          <div class="vector">
+            <h4 class="time3"></h4>
+            <div class="weather-img3"></div>
+            <h5 class="tem"></h5>
+          </div>
+          <div class="vector">
+            <h4 class="time4"></h4>
+            <div class="weather-img4"></div>
+            <h5 class="tem"></h5>
+          </div>
+          <div class="vector">
+            <h4 class="time5"></h4>
+            <div class="weather-img5"></div>
+            <h5 class="tem"></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Links -->
+    <script src="script.js"></script>
+    <script src="date.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
